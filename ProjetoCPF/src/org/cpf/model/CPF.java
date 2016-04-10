@@ -25,12 +25,26 @@ public class CPF {
 	public void setEntrada(String entrada) {
 		this.entrada = entrada;
 	}
+	
+	public void setEntrada(Integer[] entradaNumerica) {
+		this.entrada = "";
+		for (int i = 0; i < TAM_CPF; i++) {
+			this.entrada = entrada.concat(String.valueOf(entradaNumerica[i]));
+		}
+	}
+	
 	public Integer[] getEntradaNumerica() {
 		return entradaNumerica;
 	}
 	
 	public Integer getEntradaNumericaAt(int index) {
 		return entradaNumerica[index];
+	}
+	
+	public void setEntradaNumericaAt(Integer value, int index) {
+		entradaNumerica[index] = value;
+		
+		setEntrada(entradaNumerica);
 	}
 	
 	public void setEntradaNumerica(String entrada) {

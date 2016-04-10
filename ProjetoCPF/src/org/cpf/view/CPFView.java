@@ -29,7 +29,7 @@ public class CPFView {
 				System.out.println("Informe os 9 dígitos: ");
 				bufferCPF = ler.next();
 				
-				cpfController.criarCPF(bufferCPF);
+				System.out.println(cpfController.criarCPF(bufferCPF));
 				break;
 				
 			case 2:
